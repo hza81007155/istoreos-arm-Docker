@@ -12,6 +12,7 @@ jobs:
   check-update-and-build:
     runs-on: ubuntu-latest
     permissions:
+      packages: write
       contents: write   # 授予写入权限
     steps:
       - name: Checkout repository
