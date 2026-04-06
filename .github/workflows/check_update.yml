@@ -118,8 +118,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/istoreos:${{ steps.check.outputs.date }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/istoreos:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/istoreos-aarch64:${{ steps.check.outputs.date }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/istoreos-aarch64:latest
 
       - name: Commit and push if changed
         if: steps.check.outputs.updated == 'true'
