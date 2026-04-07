@@ -8,7 +8,7 @@ TMP_FILE=$(mktemp)
 wget -q -O "$TMP_FILE" https://fw.koolcenter.com/iStoreOS/armsr/
 
 # 使用 grep 提取所有 img.gz 文件的链接
-LATEST_URL=$(grep -o 'istoreos-[0-9.]*-[0-9]*armsr-squashfs-combined-efi.img.gz' "$TMP_FILE" | head -n 1)
+LATEST_URL=$(grep -o 'istoreos-[0-9.]*-[0-9]*-armsr-squashfs-combined-efi.img.gz' "$TMP_FILE" | head -n 1)
 
 # 清理临时文件
 rm -f "$TMP_FILE"
@@ -35,7 +35,7 @@ README_FILE="README.md"
 # 检查 README 文件是否存在
 if [ -f "$README_FILE" ]; then
     # 从 README 文件中获取当前的 URL
-    CURRENT_URL=$(grep -o 'https://fw.koolcenter.com/iStoreOS/armsr/istoreos-[0-9.]*-[0-9]*armsr-squashfs-combined-efi.img.gz' "$README_FILE" | head -n 1)
+    CURRENT_URL=$(grep -o 'https://fw.koolcenter.com/iStoreOS/armsr/istoreos-[0-9.]*-[0-9]*-armsr-squashfs-combined-efi.img.gz' "$README_FILE" | head -n 1)
     
     if [ -z "$CURRENT_URL" ]; then
         echo "在 README 文件中未找到当前 URL。"
