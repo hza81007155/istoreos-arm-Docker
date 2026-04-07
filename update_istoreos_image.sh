@@ -5,10 +5,10 @@ echo "获取最新的 iStoreOS 镜像 URL..."
 
 # 直接使用 wget 下载网页内容到临时文件
 TMP_FILE=$(mktemp)
-wget -q -O "$TMP_FILE" https://fw.koolcenter.com/iStoreOS/armsr/
+wget -q -O "$TMP_FILE" https://fw.koolcenter.com/iStoreOS/r6s/
 
 # 使用 grep 提取所有 img.gz 文件的链接
-LATEST_URL=$(grep -o 'istoreos-[0-9.]*-[0-9]*-armsr-squashfs-combined-efi.img.gz' "$TMP_FILE" | head -n 1)
+LATEST_URL=$(grep -o 'istoreos-[0-9.]*-[0-9]*-r6s-squashfs.img.gz' "$TMP_FILE" | head -n 1)
 
 # 清理临时文件
 rm -f "$TMP_FILE"
@@ -21,8 +21,8 @@ if [ -z "$LATEST_URL" ]; then
     exit 1
 fi
 
-# FULL_URL="https://fw.koolcenter.com/iStoreOS/armsr/$LATEST_URL"
-FULL_URL="https://fw.koolcenter.com/iStoreOS/armsr/$LATEST_URL"
+# FULL_URL="https://fw.koolcenter.com/iStoreOS/r6s/$LATEST_URL"
+FULL_URL="https://fw.koolcenter.com/iStoreOS/r6s/$LATEST_URL"
 echo "最新的 URL: $FULL_URL"
 
 # 从 URL 中提取日期部分
@@ -35,7 +35,7 @@ README_FILE="README.md"
 # 检查 README 文件是否存在
 if [ -f "$README_FILE" ]; then
     # 从 README 文件中获取当前的 URL
-    CURRENT_URL=$(grep -o 'https://fw.koolcenter.com/iStoreOS/armsr/istoreos-[0-9.]*-[0-9]*-armsr-squashfs-combined-efi.img.gz' "$README_FILE" | head -n 1)
+    CURRENT_URL=$(grep -o 'https://fw.koolcenter.com/iStoreOS/r6s/istoreos-[0-9.]*-[0-9]*-r6s-squashfs.img.gz' "$README_FILE" | head -n 1)
     
     if [ -z "$CURRENT_URL" ]; then
         echo "在 README 文件中未找到当前 URL。"
