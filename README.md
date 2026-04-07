@@ -5,7 +5,7 @@
 ## 最新版本
 
 - 最新的 iStoreOS 镜像 URL:
-  https://fw.koolcenter.com/iStoreOS/r5s/istoreos-24.10.5-2026040311-r5s-squashfs.img.gz
+  https://fw.koolcenter.com/iStoreOS/armsr/istoreos-24.10.5-2026040311-armsr-squashfs-combined-efi.img.gz
 - 更新日期: 2026040311
 
 ## Docker 镜像
