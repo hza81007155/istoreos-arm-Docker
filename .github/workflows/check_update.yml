@@ -56,7 +56,7 @@ jobs:
 
           ## Docker 镜像
 
-          Docker Hub: https://hub.docker.com/r/${{ secrets.DOCKERHUB_USERNAME }}/istoreos
+          Docker Hub: https://hub.docker.com/r/${{ secrets.DOCKERHUB_USERNAME }}/istoreos-aarch64
 
           可用标签:
           - \`latest\`: 始终指向最新版本
