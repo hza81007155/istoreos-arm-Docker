@@ -10,7 +10,7 @@
 
 ## Docker 镜像
 
-Docker Hub: https://hub.docker.com/r/hza800755/istoreos-aarch64
+Docker Hub: [https://hub.docker.com/r/hza800755/istoreos-aarch64](https://hub.docker.com/r/hza800755/istoreos-aarch64/tags)
 
 可用标签:
 - `latest`: 始终指向最新版本
